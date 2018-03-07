@@ -1,4 +1,4 @@
-= BAT Report Integration Reference
+= To Configure and View Test Reports
 
 BAT generates basic types of reports locally in JSON and HTML without any configuration. When you execute tests, the path to the reports appears in the output. For example:
 
@@ -31,7 +31,7 @@ New Relic has a plugin configured for BAT that can capture the metrics from test
 * An output directory
 * Your NEW_RELIC_LICENSE_KEY  
 
-=== To View Reports
+=== To View New Relic Reports
 
 . Create a reporters directory for saving the generated reports on the save level as your tests directory and bat.yaml file.
 . Obtain a New Relic license key. 
@@ -60,7 +60,7 @@ New test result data appears in New Relic after you run each test.
 +
 image::new-relic-metrics.png[]
 
-== PagerDuty
+= PagerDuty
 
 The integration of BAT with PagerDuty generates an incident when a test fails and triggers configured PagerDuty alerts. If a monitor always fails with the same error, BAT does not generate a new issue, but instead ignores these errors.
 
@@ -93,8 +93,6 @@ image::pagerduty-report.png[]
 == Slack
 
 You can integrate BAT and Slack to generate alerts in slack. You send messages to a specific channel through a webhook. 
-
-=== To Configure Test Notification in Slack
 
 . Create the webhook:
 * On Slack, go to your organization’s app directory page at yourorg.slack.com/apps.
@@ -176,8 +174,3 @@ reporters:
 In a few moments, the test results appear in Sumo Logic under Log Search.
 +
 image::sumo-results.png[]
-
-
-
-
-

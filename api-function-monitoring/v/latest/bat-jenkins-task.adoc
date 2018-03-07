@@ -1,10 +1,16 @@
 = To Execute Tests in Jenkins
 
-In this procedure, you create a Jenkinsfile in your test directory that includes a magic function call. You upload the contents of your test directory to Jenkins and BAT executes tests when the magic function is called. The Jenkinsfile in the bat.demo repo includes configuration code that executes tests located in an branch of a repository.
+In this procedure, you create a Jenkinsfile in your test directory that includes a magic function call:
+
+`apiTests()`
+
+This function can optionally take an argument, such as the location of the tests.
+
+You upload the contents of your test directory to Jenkins and BAT executes tests when the magic function is called. The Jenkinsfile in the bat.demo repo includes configuration code that identifies the location of a test repository.
 
 . Create a named Jenkinsfile in your test directory at the same level as bat.yaml. For example:
 +
-image::jenkins-file.png[]
+image::jenkins-file.png[width=192,height=193]
 +
 . In Jenkinsfile, call the apiTests groovy function:
 +
