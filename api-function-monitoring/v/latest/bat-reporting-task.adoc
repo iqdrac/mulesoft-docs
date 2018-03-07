@@ -34,6 +34,8 @@ New Relic has a plugin configured for BAT that can capture the metrics from test
 === To View New Relic Reports
 
 . Create a reporters directory for saving the generated reports on the save level as your tests directory and bat.yaml file.
++
+image::reporters-directory.png[width=187,height=160]
 . Obtain a New Relic license key. 
 * Go to the New Relic Account Settings. 
 * Copy your license key from the right sidebar under Account Summary.
