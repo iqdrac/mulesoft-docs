@@ -67,3 +67,8 @@ As you experiment in the BAT playground, hints appear when errors occur.
 +
 image::bat-playground-hints.png[]
 
+Next, schedule testing and monitoring.
+
+== See Also
+
+*** link:/api-function-monitoring/bat-schedule-test-task[To Schedule Testing and Monitoring]

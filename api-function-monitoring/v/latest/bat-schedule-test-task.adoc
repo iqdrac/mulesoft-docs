@@ -51,7 +51,9 @@ scheduleId: 99c24a04-b82b-4366-b02b-4682fa405ead
 +
 `bat schedule create --cron="0 0 12 1/1 * ? *"`
 
+Next, configure and view test reports.
+
 == See Also
 
+** link:/api-function-monitoring/bat-reporting-task[To Configure and View Test Reports]
 ** link:/api-function-monitoring/bat-command-reference[BAT Command Reference]
-** link:/api-function-monitoring/bat-report-reference[BAT Report Integration Reference]
