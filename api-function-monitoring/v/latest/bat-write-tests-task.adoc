@@ -62,7 +62,7 @@ describe `api-mon` in [
 +
 This test asserts that 10 is the size of the users list array returned by the API.
 
-Next, link:/api-monitor/bat-execute-task[Execute BAT Tests].
+Next, link:/api-function-monitoring/bat-execute-task[execute BAT Tests].
 
 == See Also
 

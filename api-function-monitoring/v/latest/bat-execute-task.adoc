@@ -48,7 +48,7 @@ Details about the request, response, assertions, and the raw data of the respons
 +
 image::bat-html-report-request.png[]
 
-Next, link:/[Run tests in the BAT Playground].
+Next, link:/api-function-monitoring/bat-playground-task[Run tests in the BAT Playground].
 
 == See Also
 
