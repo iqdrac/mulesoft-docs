@@ -1,18 +1,5 @@
 = To Configure and View Test Reports
 
-BAT generates basic types of reports locally in JSON and HTML without any configuration. When you execute tests, the path to the reports appears in the output. For example:
-
-----
-bat
-BAT Version: 0.3.340
-#  File: ./tests/step.0.dwl
-...
-#  Reporter: bat/Reporters/JSON.dwl >> /var/folders/w5/_cc_5_z12pq3qnymf3f0zh840000gq/T/bat_report_20180225145000.json
-#  Reporter: bat/Reporters/HTML.dwl >> /var/folders/w5/_cc_5_z12pq3qnymf3f0zh840000gq/T/bat_report_20180225145000.html
-----
-
-image::bat-html-report.png[]
-
 You can configure BAT for use with a number reporting systems. For example:
 
 * New Relic
@@ -40,8 +27,8 @@ New Relic has a plugin configured for BAT that can capture the metrics from test
 +
 ----
 reporters:
-  - file: /reporters/NewRelic.dwl
-    outFile: /dev/null
+  - type: NewRelic
+    outFile: outputNewRelic.json
     options:
       NEW_RELIC_LICENSE_KEY: "xxxxxxxxxxxxxxx"
 ----
@@ -80,7 +67,8 @@ image::integrations-pagerduty.png[]
 +
 ----
 reporters:
-  - file: bat/Reporters/PagerDuty.dwl
+  - type: PagerDuty
+    outFile: PagerDuty.json
     options:
       SERVICE_KEY: "xxxxxxxxxxxxxxxxxxx"
 ----
@@ -114,8 +102,8 @@ metadata:
   slack_channel: bat-bot
 ...
 reporters:
-  - file: bat/Reporters/Slack.dwl
-    outFile: output.json
+  - type: Slack
+    outFile: outputSlack.json
     options:
       SLACK_WEBHOOK: "yourwebhook-URL"
 ----
@@ -123,24 +111,6 @@ reporters:
 The alert notification occurs in the case of failure and provides the name of the suite in which the error occurs.
 
 image::bat-demo-failed.png[]
-
-
-////
-How about the metadata in bat demo?
-
-BAT Version: 0.3.340
-*** Error ***
-while parsing a block mapping
- in 'reader', line 1, column 1:
-    files:
-    ^
-expected <block end>, but found BlockEntry
- in 'reader', line 26, column 1:
-    - file: bat/Reporters/Slack.dwl
-    ^
-
- at [Source: java.io.BufferedInputStream@327514f; line: 26, column: 1]
-////
 
 
 == Sumo Logic
@@ -165,11 +135,27 @@ image::sumo-setup.png[]
 +
 ----
 reporters:
-  - file: bat/Reporters/SumoLogic.dwl 
+  - type: SumoLogic 
+    outfile: SumoLogic.json
     options:
-      SUMO_ENDPOINT: https://endpoint1.collection.us2.sumologic.com/receiver/v1/http/ZaVnC4dhaV1nH-hvpNewI5GSjsyUfU07BnldpFR3VXbea59pGNwAHVMs4FMS2ItsOzklsnLsQLrDS3VXNXLKozhrnL6aFaCAQJt2FHYVy6FkXSZyrRsxSw==
+      SUMO_ENDPOINT: <your endpoint URL: +`https://endpoint1.collection.us2.sumologic.com/...+`>
 ----
 +
 In a few moments, the test results appear in Sumo Logic under Log Search.
 +
 image::sumo-results.png[]
+
+== Local Reports
+
+BAT generates basic types of reports locally in JSON and HTML. When you execute tests, the path to the reports appears in the output. 
+
+=== To Configure Local Report Generation
+
+In the bat.yaml, specify a `type` field to generate local reports. For example:
+
+----
+reporters:
+- type: Local
+    file: myreporters/step.0.dwl
+    outFile: reporter.out
+----
