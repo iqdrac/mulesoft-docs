@@ -138,8 +138,12 @@ reporters:
   - type: SumoLogic 
     outfile: SumoLogic.json
     options:
-      SUMO_ENDPOINT: <your endpoint URL: +`https://endpoint1.collection.us2.sumologic.com/...+`>
+      SUMO_ENDPOINT: <your endpoint URL>
 ----
++
+The SUMO_ENDPOINT is, for example:
++
+`+https://endpoint1.collection.us2.sumologic.com/...+`
 +
 In a few moments, the test results appear in Sumo Logic under Log Search.
 +
