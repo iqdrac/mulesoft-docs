@@ -4,7 +4,7 @@ BAT is deployed by default in the Production environment of Anypoint Platform wh
 
 After running the command, BAT creates a monitor in Anypoint Platform. The monitor collects information about the scheduled execution of the test. To obtain this information, you need to set up a third-party reporting tool as described in the linked topic.
 
-This procedure describes how to schedule, run, and monitor an API test in Anypoint Platform once and also repeatedly using a cron job.
+This procedure describes how to schedule, run, and monitor an API test in Anypoint Platform using the default schedule and how to use a cron job to change the schedule.
 
 . Login to Anypoint Platform using BAT. For example:
 +
