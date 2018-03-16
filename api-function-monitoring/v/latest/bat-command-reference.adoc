@@ -67,11 +67,11 @@ Generate a post with the machine name and create a dummy target.
 +
 ** `schedule create [--cron="<expression>"]`
 +
-Create a scheduler using a cron expression and generating a zip that includes the tests and all the files. By default, if a cron expression is not entered, the default of 5 minutes takes effect.
+Create a scheduler using a cron expression and generating a zip that includes the tests and all the files. By default, if a cron expression is not entered, tests are scheduled to run every 5 minutes.
 +
 ** `schedule endpoint <arbitrary-URL> [--profile=<value>] [--init-folder]`
 +
-Create a monitor in Exchange of using an arbitrary URL, for example `+http://example.com+`. Optionally, store generated exchange.json and main.dml in the currrent directory.
+Create a monitor in Exchange of using an arbitrary URL, for example `+http://example.com+`. Optionally, store generated exchange.json and main.dml in the currrent directory. By default, tests are scheduled to run every 5 minutes.
 +
 ** `schedule list [--profile=<value>]`
 +
