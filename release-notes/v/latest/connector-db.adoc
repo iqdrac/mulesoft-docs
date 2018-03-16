@@ -6,6 +6,9 @@
 
 *March 16, 2018*
 
+==== Min Mule Version
+*Mule 4.1.0*
+
 === New Features and Enhancements
 
 This release includes the following enhancements, changes, and fixes:
@@ -35,6 +38,9 @@ None
 
 *March 02, 2018*
 
+==== Min Mule Version
+*Mule 4.1.0*
+
 === New Features and Enhancements
 
 This release includes the following enhancements, changes, and fixes:
@@ -62,6 +68,9 @@ Mule 4.1
 == 1.2.0
 
 *Jan 19, 2018*
+
+==== Min Mule Version
+*Mule 4.0.0*
 
 === New Features and Enhancements
 
